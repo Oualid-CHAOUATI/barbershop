@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+.flex.f-reverse {
+  flex-direction: row-reverse;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-column {
+  flex-direction: column;
+}
+.f-column.f-reverse {
+  flex-direction: column-reverse;
+}
+
+.iflex {
+  display: inline-flex;
+}
+
+.f-center-align, .f-center {
+  align-items: center;
+}
+
+.f-center-justify, .f-center {
+  justify-content: center;
+}
+
+.f-gap-0p5 {
+  gap: 0.5em;
+}
+
+.f-gap-1 {
+  gap: 1em;
+}
+
+.f-gap-2 {
+  gap: 2em;
+}
+
+.f-gap-3 {
+  gap: 3em;
+}
+
+.inline-b {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.grid {
+  display: grid;
+}
+.grid-center {
+  place-items: center;
+}
+
+.pointer, .btn {
+  cursor: pointer;
+}
+
+input, button {
+  font-size: inherit;
+  color: inherit;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.auto-margin {
+  margin-inline: auto;
+}
+
+.x-auto-margin {
+  margin-inline: auto;
+}
+
+.y-auto-margin {
+  margin-block: auto;
+}
+
+.link-style {
+  text-decoration: underline;
+  padding: 0;
+  background: none;
+  border: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.img-wrapper.full-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.extended {
+  width: 100%;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}/*# sourceMappingURL=presets.css.map */

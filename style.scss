@@ -102,13 +102,11 @@ header {
       
       .dot:nth-child(2){
 
-        // transform: scaleY(var(--size-amplier))!important;
       transform:translateX(-50%) scaleY(var(--size-amplier));
 
       }
       .dot:is(:nth-child(1),:nth-child(3)){
-        // transform: scaleX(var(--size-amplier))!important;
-        scale:var(--size-amplier) 1;
+        transform: scaleY(var(--size-amplier)) ;
 
       }
 
@@ -324,7 +322,6 @@ main .left {
       }
       &:hover:before{
         transform:scale(1.2);
-        // scale:1.2;
       }
     }
   }
@@ -405,7 +402,6 @@ main .left {
   &:hover {
     .icon-wrapper {
       transform:scale(1.1);
-      // scale: 1.1;
     }
   }
 }

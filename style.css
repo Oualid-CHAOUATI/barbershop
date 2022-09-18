@@ -86,7 +86,7 @@ header .hamburger-label:hover .dots-wrapper .dot:nth-child(2), header #hamburger
   transform: translateX(-50%) scaleY(var(--size-amplier));
 }
 header .hamburger-label:hover .dots-wrapper .dot:is(:nth-child(1), :nth-child(3)), header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper .dot:is(:nth-child(1), :nth-child(3)) {
-  scale: var(--size-amplier) 1;
+  transform: scaleY(var(--size-amplier));
 }
 header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper {
   transform: rotate(45deg);

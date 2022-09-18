@@ -82,8 +82,7 @@ header {
   &:checked~.hamburger-label{
     @extend %opened-menu-label-state;
     &:hover .dots-wrapper{
-      // scale:.5;
-      rotate:135deg;
+      transform:rotate(135deg);
     }
   }
   }
@@ -118,8 +117,7 @@ header {
     
   @extend %hovered-menu-label-state;
   .dots-wrapper{
-
-    rotate:45deg;
+transform:rotate(45deg);
   }
 
 
@@ -234,7 +232,6 @@ header {
       border-radius: 2em;
     }
     &:hover:before{
-      // rotate:-10deg;
       width:100%;
     }
   }
@@ -297,8 +294,12 @@ main .left {
     gap: 1em ;
 
     button {
+      &:nth-child(1){
+
+        padding-inline: 2em;
+
+      }
       $pad-block: 1.5em;
-      padding-inline: 2em;
       height: calc(1.5em + #{$pad-block});
 
       border: 0;
@@ -369,7 +370,6 @@ main .left {
 
 .secondary-btn {
   width: max-content;
-  // outline: 2px solid red;
   height: 2em;
   padding: 0;
   border: 0;
@@ -393,7 +393,7 @@ main .left {
       $s: 1em;
       height: $s;
       width: $s;
-      rotate: 90deg;
+
     }
     transition: 300ms;
   }
@@ -411,18 +411,15 @@ main .left {
     transition: 300ms;
   }
 
-  svg {
-    transform: rotate(-90deg);
-  }
+ 
 
-  .forwards-btn.secondary-btn {
+ 
+  .forwards-btn {
     .text-wrapper {
       margin-left: 0;
       margin-right: var(--marginSide);
     }
-    svg {
-      transform: rotate(90deg);
-    }
+   
   }
 
   %hide {
@@ -494,7 +491,7 @@ main .left {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    rotate: var(--deg, 0deg);
+    transform:rotate(var(--deg, 0deg));
     // border-radius: 1em;
 
     z-index: 99;
@@ -522,7 +519,7 @@ main .left {
 
 
   &:hover .star-svg{
-    rotate:.5turn;
+    transform: rotate(.5turn);
   }
 }
 
@@ -561,11 +558,12 @@ footer {
 .band{
   padding-block: 1em;
   overflow:hidden;
-  font-size: 1.3em;
+  font-size: clamp(.9em,1vw,1em);
+  // font-size: 1em;
   .content{
     white-space: nowrap;
     gap:1em;
-    padding-inline: 1em;
+    padding-inline: .7em;
     animation:scroll 10s linear infinite;
 
   }
@@ -907,6 +905,7 @@ footer {
   }
  .btns-wrapper{
   gap: 2em !important;
+  justify-content: center;
 
  } 
 
@@ -915,5 +914,13 @@ footer {
   a{
     gap:.3em;
   }
+}
  }
+
+
+
+
+.to-rotate svg{
+
+transform: rotate(var(--deg,0));
 }

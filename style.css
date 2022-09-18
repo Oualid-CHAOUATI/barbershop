@@ -72,7 +72,7 @@ header #hamburger-checkbox {
   display: none;
 }
 header #hamburger-checkbox:checked ~ .hamburger-label:hover .dots-wrapper {
-  rotate: 135deg;
+  transform: rotate(135deg);
 }
 header .hamburger-label {
   display: none;
@@ -89,7 +89,7 @@ header .hamburger-label:hover .dots-wrapper .dot:is(:nth-child(1), :nth-child(3)
   scale: var(--size-amplier) 1;
 }
 header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper {
-  rotate: 45deg;
+  transform: rotate(45deg);
 }
 
 .hamburger-label {
@@ -230,10 +230,12 @@ main .left .btns-wrapper {
   gap: 1em;
 }
 main .left .btns-wrapper button {
-  padding-inline: 2em;
   height: calc(1.5em + 1.5em);
   border: 0;
   background: none;
+}
+main .left .btns-wrapper button:nth-child(1) {
+  padding-inline: 2em;
 }
 main .left .btns-wrapper .main-btn {
   color: #fff;
@@ -317,7 +319,6 @@ main .left .btns-wrapper .main-btn:hover:before {
 .secondary-btn .icon-wrapper svg {
   height: 1em;
   width: 1em;
-  rotate: 90deg;
 }
 .secondary-btn:hover .icon-wrapper {
   scale: 1.1;
@@ -329,15 +330,9 @@ main .left .btns-wrapper .main-btn:hover:before {
 .gallery-navigation button {
   transition: 300ms;
 }
-.gallery-navigation svg {
-  transform: rotate(-90deg);
-}
-.gallery-navigation .forwards-btn.secondary-btn .text-wrapper {
+.gallery-navigation .forwards-btn .text-wrapper {
   margin-left: 0;
   margin-right: var(--marginSide);
-}
-.gallery-navigation .forwards-btn.secondary-btn svg {
-  transform: rotate(90deg);
 }
 .gallery-navigation.hide-right .forwards-btn, .gallery-navigation.hide-left .backwards-btn {
   opacity: 0.3;
@@ -396,7 +391,7 @@ main .left .btns-wrapper .main-btn:hover:before {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  rotate: var(--deg, 0deg);
+  transform: rotate(var(--deg, 0deg));
   z-index: 99;
   transition: translate 600ms 600ms, left 600ms, z-index 0ms 700ms;
   pointer-events: none;
@@ -415,7 +410,7 @@ main .left .btns-wrapper .main-btn:hover:before {
   display: none;
 }
 .logo a:hover .star-svg {
-  rotate: 0.5turn;
+  transform: rotate(0.5turn);
 }
 
 .star-svg {
@@ -446,12 +441,12 @@ footer .band, footer .content {
 footer .band {
   padding-block: 1em;
   overflow: hidden;
-  font-size: 1.3em;
+  font-size: clamp(0.9em, 1vw, 1em);
 }
 footer .band .content {
   white-space: nowrap;
   gap: 1em;
-  padding-inline: 1em;
+  padding-inline: 0.7em;
   -webkit-animation: scroll 10s linear infinite;
           animation: scroll 10s linear infinite;
 }
@@ -690,8 +685,12 @@ footer .band:nth-child(2) .content .star-svg {
   }
   .btns-wrapper {
     gap: 2em !important;
+    justify-content: center;
   }
   .logo a {
     gap: 0.3em;
   }
+}
+.to-rotate svg {
+  transform: rotate(var(--deg, 0));
 }/*# sourceMappingURL=style.css.map */

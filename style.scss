@@ -98,13 +98,16 @@ header {
     
     .dots-wrapper{
       aspect-ratio:1;
-      translate:0% 130%;
+      transform:translateY(130%);
       
       .dot:nth-child(2){
 
-        scale:  1 var(--size-amplier)!important;
+        // transform: scaleY(var(--size-amplier))!important;
+      transform:translateX(-50%) scaleY(var(--size-amplier));
+
       }
       .dot:is(:nth-child(1),:nth-child(3)){
+        // transform: scaleX(var(--size-amplier))!important;
         scale:var(--size-amplier) 1;
 
       }
@@ -170,7 +173,7 @@ transform:rotate(45deg);
         }
         &:nth-child(2){
       left: 50%;
-      translate:-50% 0;
+      transform:translateX(-50%)
         }
         &:nth-child(3){
       right: 0%;
@@ -320,7 +323,8 @@ main .left {
         transition:300ms;
       }
       &:hover:before{
-        scale:1.2;
+        transform:scale(1.2);
+        // scale:1.2;
       }
     }
   }
@@ -400,7 +404,8 @@ main .left {
 
   &:hover {
     .icon-wrapper {
-      scale: 1.1;
+      transform:scale(1.1);
+      // scale: 1.1;
     }
   }
 }
@@ -760,7 +765,8 @@ footer {
   li:hover{
      @extend %shown-link;
      a{
-      translate:-10% 0
+       transform:translateX(-10%)
+      // translate:-10% 0
     }
   }
   $menu-shift:200vw;

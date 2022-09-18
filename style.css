@@ -80,10 +80,10 @@ header .hamburger-label {
 }
 header .hamburger-label:hover .dots-wrapper, header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper {
   aspect-ratio: 1;
-  translate: 0% 130%;
+  transform: translateY(130%);
 }
 header .hamburger-label:hover .dots-wrapper .dot:nth-child(2), header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper .dot:nth-child(2) {
-  scale: 1 var(--size-amplier) !important;
+  transform: translateX(-50%) scaleY(var(--size-amplier));
 }
 header .hamburger-label:hover .dots-wrapper .dot:is(:nth-child(1), :nth-child(3)), header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper .dot:is(:nth-child(1), :nth-child(3)) {
   scale: var(--size-amplier) 1;
@@ -133,7 +133,7 @@ header #hamburger-checkbox:checked ~ .hamburger-label .dots-wrapper {
 }
 .hamburger-label .dots-wrapper .dot:nth-child(2) {
   left: 50%;
-  translate: -50% 0;
+  transform: translateX(-50%);
 }
 .hamburger-label .dots-wrapper .dot:nth-child(3) {
   right: 0%;
@@ -252,7 +252,7 @@ main .left .btns-wrapper .main-btn::before {
   transition: 300ms;
 }
 main .left .btns-wrapper .main-btn:hover:before {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .stat-wrapper {
@@ -321,7 +321,7 @@ main .left .btns-wrapper .main-btn:hover:before {
   width: 1em;
 }
 .secondary-btn:hover .icon-wrapper {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 .gallery-navigation {
@@ -590,7 +590,7 @@ footer .band:nth-child(2) .content .star-svg {
     transition: 300ms;
   }
   .nav-menu li:hover a {
-    translate: -10% 0;
+    transform: translateX(-10%);
   }
   .nav-menu li {
     transform: translateX(-200vw);

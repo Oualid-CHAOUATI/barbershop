@@ -106,7 +106,7 @@ header {
 
       }
       .dot:is(:nth-child(1),:nth-child(3)){
-        transform: scaleY(var(--size-amplier)) ;
+        transform: scaleX(var(--size-amplier)) ;
 
       }
 

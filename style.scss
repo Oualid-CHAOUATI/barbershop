@@ -498,13 +498,13 @@ main .left {
     z-index: 99;
 
     $shiftTime:600ms;
-    transition: translate $shiftTime $shiftTime, left $shiftTime, z-index 0ms 700ms;
+    transition: transform $shiftTime $shiftTime, left $shiftTime, z-index 0ms 700ms;
 
     pointer-events: none;
     &.hide {
       $x:120%;
-      transition: translate $shiftTime, left $shiftTime $shiftTime, z-index 0ms 700ms;
-     transform: translateX(#{$x});     
+      transition: transform $shiftTime, left $shiftTime $shiftTime, z-index 0ms 700ms;
+     transform: translateX(#{$x}) rotate(var(--deg,0));     
       left: #{-$x};
       z-index: -99;
     }

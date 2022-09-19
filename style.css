@@ -393,12 +393,12 @@ main .left .btns-wrapper .main-btn:hover:before {
      object-fit: cover;
   transform: rotate(var(--deg, 0deg));
   z-index: 99;
-  transition: translate 600ms 600ms, left 600ms, z-index 0ms 700ms;
+  transition: transform 600ms 600ms, left 600ms, z-index 0ms 700ms;
   pointer-events: none;
 }
 .gallery-imgs-wrapper img.hide {
-  transition: translate 600ms, left 600ms 600ms, z-index 0ms 700ms;
-  transform: translateX(120%);
+  transition: transform 600ms, left 600ms 600ms, z-index 0ms 700ms;
+  transform: translateX(120%) rotate(var(--deg, 0));
   left: -120%;
   z-index: -99;
 }

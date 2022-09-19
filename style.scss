@@ -504,7 +504,7 @@ main .left {
     &.hide {
       $x:120%;
       transition: translate $shiftTime, left $shiftTime $shiftTime, z-index 0ms 700ms;
-      translate:#{$x} 0;
+     transform: translateX(#{$x});     
       left: #{-$x};
       z-index: -99;
     }

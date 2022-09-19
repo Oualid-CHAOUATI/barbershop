@@ -398,7 +398,7 @@ main .left .btns-wrapper .main-btn:hover:before {
 }
 .gallery-imgs-wrapper img.hide {
   transition: translate 600ms, left 600ms 600ms, z-index 0ms 700ms;
-  translate: 120% 0;
+  transform: translateX(120%);
   left: -120%;
   z-index: -99;
 }

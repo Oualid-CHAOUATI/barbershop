@@ -103,7 +103,6 @@ input, button {
   padding: 0;
   background: none;
   border: 0;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }

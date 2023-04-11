@@ -6,7 +6,7 @@ html,body{
   overflow-x:hidden;
 }
 body {
-  font-size: Clamp(16px, 1.2vw, 36px);
+  font-size: Clamp(16px, 1vw, 36px);
   font-family: "Noto Sans JP", sans-serif;
   line-height: 170%;
   margin: auto;
@@ -39,7 +39,7 @@ body {
   padding-right: var(--container-padding);
 }
 header {
-  padding-block: 2em;
+  padding-block: 1em;
 
   position: fixed;
   top: 0;
@@ -275,13 +275,10 @@ main {
   width: 150%;
   z-index: 99;
   span:nth-child(1) {
-    font-family: "Bebas Neue", cursive;
-    font-family: "Maven Pro", sans-serif;
     line-height: 1em;
     letter-spacing: 0.2em;
   }
   span:nth-child(2) {
-    font-family: "Combo", cursive;
 
     display: block;
     line-height: 0.5em;
@@ -298,7 +295,7 @@ main .left {
   }
 
   .btns-wrapper {
-    gap: 1em ;
+    gap: 3em ;
 
     button {
       &:nth-child(1){
@@ -327,7 +324,7 @@ main .left {
         transition:300ms;
       }
       &:hover:before{
-        transform:scale(1.2);
+        transform:scale(1.1);
       }
     }
   }
@@ -395,14 +392,15 @@ main .left {
     aspect-ratio: 1;
     border-radius: 50%;
     border: 2px solid rgb(35, 194, 35);
-
+    transition: 300ms;
+    
     svg {
       $s: 1em;
       height: $s;
       width: $s;
+      transition:3300ms;
 
     }
-    transition: 300ms;
   }
 
   &:hover {
@@ -617,13 +615,14 @@ footer {
 
 .search-input-wrapper{
   margin-left: auto;
-  $loop-size:2.9em;
+  $loop-size:2.8em;
   display:flex;
 
   .icon-wrapper{
     height:$loop-size;
     aspect-ratio: 1;
     z-index: 3;
+    transition: 300ms;
 
 
     svg{
@@ -650,12 +649,19 @@ footer {
     background: none;
     transition:300ms;
     position: relative;
-    &:focus{
+    
+
+  }
+
+  &:focus-within{
+    input{
       width: 7em;
       border-color: #111;
       
     }
-
+    .icon-wrapper{
+      transform: scale(.8) rotate(90deg);
+    }
   }
 }
 
@@ -726,6 +732,7 @@ footer {
     // top: 100%;
     flex-direction: column;
     justify-content: stretch;
+    font-size: 1.6em;
 
     >*{
       &,a{
@@ -912,7 +919,7 @@ footer {
     font-size: 2em;
   }
  .btns-wrapper{
-  gap: 2em !important;
+  // gap: 5em !important;
   justify-content: center;
 
  } 

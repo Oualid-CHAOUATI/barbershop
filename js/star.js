@@ -1,4 +1,4 @@
-fetch("assets/svg/star.svg")
+fetch("../assets/svg/star.svg")
   .then((response) => response.text())
   .then((svgText) =>
     document
